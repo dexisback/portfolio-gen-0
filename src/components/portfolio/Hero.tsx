@@ -67,7 +67,7 @@ export default function Hero({ profile, roles, socials }: HeroProps) {
             <span className="text-sm" style={{ color: `${colors.foreground}80` }}>
               @{profile.handle}
             </span>
-            <motion.a
+            {/* <motion.a
               href={profile.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -87,7 +87,7 @@ export default function Hero({ profile, roles, socials }: HeroProps) {
             >
               <Download className="w-3 h-3" />
               Resume
-            </motion.a>
+            </motion.a> */}
           </div>
           <div className="h-5 overflow-hidden">
             <AnimatePresence mode="wait">
