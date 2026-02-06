@@ -5,8 +5,8 @@
   "profile": {
     "name": "Amaan",
     "handle": "amaanworks.me",
-    "avatar": "./images/socialpfp.jpeg",
-    "banner": "./images/newbanner.jpeg",
+    "avatar": "/images/socialpfp.jpeg",
+    "banner": "/images/newbanner.jpeg",
     "bio": "Web generalist turned product developer — building, breaking, and shipping digital tools",
     "location": "Earth",
     "resumeUrl": "#",
@@ -35,7 +35,6 @@
       "icon": "linkedin"
     },
     {
-
       "name": "Discord",
       "url": "https://discord.com/users/1323372577657192588",
       "icon": "discord"
@@ -101,7 +100,6 @@
       "period": "",
       "location": "",
       "details": []
-      
     },
     {
       "company": "",
@@ -110,7 +108,6 @@
       "period": "",
       "location": "",
       "details": []
-      
     },
     {
       "company": "",
@@ -129,30 +126,29 @@
       "period": "2024 - 2028 (expected)",
       "location": "Vellore",
       "grade": "8.92",
-      "details":["Ranked branch top 15 for the academic year 2025-2026", "Campus Ambassador @PerplexityAI"]
+      "details": [
+        "Ranked branch top 15 for the academic year 2025-2026",
+        "Campus Ambassador @PerplexityAI"
+      ]
     }
-
   ],
   "extracurriculars": [
     {
-      
-      
-      
-      "details": ["Managed a lot of events, hacks and teams during my first year at college", "Scripted, ideated, directed, acted in my college club’s flagship yearly event, scaled the reel to a 100k views(link to the reel - https://www.instagram.com/reel/DILX0i1yPm_/)", 
-"Campus Ambassador @PerplexityAI + Comet Browser (Fall 2025)" , "Big time politics and car nerd, ping me up to discuss any event or better, any automobilia "
-      
-      
-    ]
-      
+      "details": [
+        "Managed a lot of events, hacks and teams during my first year at college",
+        "Scripted, ideated, directed, acted in my college club’s flagship yearly event, scaled the reel to a 100k views(link to the reel - https://www.instagram.com/reel/DILX0i1yPm_/)",
+        "Campus Ambassador @PerplexityAI + Comet Browser (Fall 2025)",
+        "Big time politics and car nerd, ping me up to discuss any event or better, any automobilia "
+      ]
     }
   ],
   "projects": [
-      {
+    {
       "id": "1",
       "title": "Quillscape",
       "slug": "quillscape-six",
       "description": "The anon Blog platform. An aesthetic place to write, scribble, share, draft, or share thoughts",
-      "image": "./images/Quillscape.png",
+      "image": "/images/Quillscape.png",
       "tags": [
         "Javascript",
         "Tailwind v4",
@@ -168,7 +164,7 @@
       "title": "RedditHelp",
       "slug": "reddit-help",
       "description": "Chrome extension to find, choose and filter reddit queries right at your shopping/surfing website, in your webpage",
-      "image": "./images/redditHelp.png",
+      "image": "/images/redditHelp.png",
       "tags": [
         "Typescript",
         "Manifest v4"
@@ -177,12 +173,12 @@
       "demo": "https://github.com/dexisback/redditHelp",
       "featured": true
     },
-      {
+    {
       "id": "3",
       "title": "Chalo Cargo",
       "slug": "chalo-cargo",
       "description": "peer-to-peer crowdshipping platform. Built in 36 hours in a hackathon. Finalist project.",
-      "image": "./images/chaloCargo.png",
+      "image": "/images/chaloCargo.png",
       "tags": [
         "Javascript",
         "Tailwind v4",
@@ -199,7 +195,7 @@
       "title": "SideQuest",
       "slug": "side-quest",
       "description": "Chrome extension. Enhance your chatgpt/gemini/claude experience with bookmarks, structured localStorage, and side view for queries ",
-      "image": "./images/sideQuest.png",
+      "image": "/images/sideQuest.png",
       "tags": [
         "Typescript",
         "Manifest v4"
@@ -208,8 +204,6 @@
       "demo": "https://github.com/dexisback/SideQuest",
       "featured": true
     }
-  
-  
   ],
   "blogs": [
     {
@@ -225,9 +219,8 @@
       "coverImage": "",
       "readingTime": ""
     }
-  
   ],
   "quotes": [
-   "And even if we fail, what better way is there to live?" 
+    "And even if we fail, what better way is there to live?"
   ]
 }
