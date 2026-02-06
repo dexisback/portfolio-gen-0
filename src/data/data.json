@@ -1,0 +1,234 @@
+{
+  "theme": "monochrome",
+  "github": "dexisback",
+  "illustration": false,
+  "profile": {
+    "name": "Amaan",
+    "handle": "amaanworks.me",
+    "avatar": "./images/socialpfp.jpeg",
+    "banner": "./images/banner.jpeg",
+    "bio": "Web generalist turned product developer — building, breaking, and shipping digital tools",
+    "location": "Earth",
+    "resumeUrl": "#",
+    "email": "texamaan86@gmail.com"
+  },
+  "roles": [
+    "Product Dev",
+    "Web Design",
+    "Full Stack Infra",
+    "Car geek"
+  ],
+  "socials": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/dexisback",
+      "icon": "github"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://x.com/dextertwts",
+      "icon": "twitter"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/amaan86/",
+      "icon": "linkedin"
+    },
+    {
+
+      "name": "Discord",
+      "url": "https://discord.com/users/1323372577657192588",
+      "icon": "discord"
+    },
+    {
+      "name": "Buy Me Coffee",
+      "url": "",
+      "icon": "buyMeCoffee"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Typescript",
+      "icon": "typescript",
+      "color": "#8B5CF6"
+    },
+    {
+      "name": "Next.js",
+      "icon": "nextjs",
+      "color": "#EF4444"
+    },
+    {
+      "name": "React",
+      "icon": "react",
+      "color": "#F59E0B"
+    },
+    {
+      "name": "MongoDB",
+      "icon": "mongodb",
+      "color": "#10B981"
+    },
+    {
+      "name": "Postgres",
+      "icon": "postgres",
+      "color": "#3B82F6"
+    },
+    {
+      "name": "Express.js",
+      "icon": "expressjs",
+      "color": "#EC4899"
+    },
+    {
+      "name": "TailwindCSS",
+      "icon": "tailwindcss",
+      "color": "#06B6D4"
+    },
+    {
+      "name": "Firebase",
+      "icon": "firebase",
+      "color": "#DC2626"
+    },
+    {
+      "name": "Supabase",
+      "icon": "supabase",
+      "color": "#DC2626"
+    }
+  ],
+  "experience": [
+    {
+      "company": " ",
+      "role": "",
+      "type": "",
+      "period": "",
+      "location": "",
+      "details": []
+      
+    },
+    {
+      "company": "",
+      "role": "",
+      "type": "",
+      "period": "",
+      "location": "",
+      "details": []
+      
+    },
+    {
+      "company": "",
+      "role": "",
+      "type": "",
+      "period": "",
+      "location": "",
+      "details": []
+    }
+  ],
+  "education": [
+    {
+      "institution": "VIT, Vellore",
+      "degree": "BTech. IT",
+      "field": "",
+      "period": "2024 - 2028 (expected)",
+      "location": "Vellore",
+      "grade": "8.92",
+      "details":["Ranked branch top 15 for the academic year 2025-2026", "Campus Ambassador @PerplexityAI"]
+    }
+
+  ],
+  "extracurriculars": [
+    {
+      
+      
+      
+      "details": ["Big time car guy, I'm deep into motorsports and automobilia, you'll find me watching a doc on obscure 'junk' when im not talking to agents","Scripting, ideated, directed, acted in my college club’s flagship yearly event, scaled the reel to a 100k views(link to the reel - https://www.instagram.com/reel/DILX0i1yPm_/)", 
+"Campus Ambassador @PerplexityAI + Comet Browser (Fall 2025)",
+      "Edited and Conducted my college club's internal hackathon event",
+      "grew an anon X account to over 1M+ lifetime views"
+      
+    ]
+      
+    }
+  ],
+  "projects": [
+      {
+      "id": "1",
+      "title": "Quillscape",
+      "slug": "quillscape-six",
+      "description": "The anon Blog platform. An aesthetic place to write, scribble, share, draft, or share thoughts",
+      "image": "./images/Quillscape.png",
+      "tags": [
+        "Javascript",
+        "Tailwind v4",
+        "MongoDB",
+        "ExpressJS"
+      ],
+      "github": "https://github.com/dexisback/Quillscape",
+      "demo": "https://quillscape.amaanworks.me",
+      "featured": true
+    },
+    {
+      "id": "2",
+      "title": "RedditHelp",
+      "slug": "reddit-help",
+      "description": "Chrome extension to find, choose and filter reddit queries right at your shopping/surfing website, in your webpage",
+      "image": "./images/redditHelp.png",
+      "tags": [
+        "Typescript",
+        "Manifest v4"
+      ],
+      "github": "https://github.com/dexisback/redditHelp",
+      "demo": "https://github.com/dexisback/redditHelp",
+      "featured": true
+    },
+      {
+      "id": "3",
+      "title": "Chalo Cargo",
+      "slug": "chalo-cargo",
+      "description": "peer-to-peer crowdshipping platform. Built in 36 hours in a hackathon. Finalist project.",
+      "image": "./images/chaloCargo.png",
+      "tags": [
+        "Javascript",
+        "Tailwind v4",
+        "Websockets",
+        "MongoDB",
+        "ExpressJS"
+      ],
+      "github": "https://github.com/dexisback/crowdshipper",
+      "demo": "https://chalocargo.amaanworks.me",
+      "featured": true
+    },
+    {
+      "id": "4",
+      "title": "SideQuest",
+      "slug": "side-quest",
+      "description": "Chrome extension. Enhance your chatgpt/gemini/claude experience with bookmarks, structured localStorage, and side view for queries ",
+      "image": "./images/sideQuest.png",
+      "tags": [
+        "Typescript",
+        "Manifest v4"
+      ],
+      "github": "https://github.com/dexisback/SideQuest",
+      "demo": "https://github.com/dexisback/SideQuest",
+      "featured": true
+    }
+  
+  
+  ],
+  "blogs": [
+    {
+      "slug": "",
+      "title": "",
+      "date": "",
+      "excerpt": "",
+      "tags": [
+        "",
+        "",
+        ""
+      ],
+      "coverImage": "",
+      "readingTime": ""
+    }
+  
+  ],
+  "quotes": [
+   "And even if we fail, what better way is there to live?" 
+  ]
+}
