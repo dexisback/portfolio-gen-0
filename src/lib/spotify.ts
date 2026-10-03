@@ -1,3 +1,5 @@
+import { createServerFn } from "@tanstack/react-start";
+
 export interface SpotifyTrack {
   name: string;
   artists: Array<{ name: string }>;
@@ -23,16 +25,21 @@ const SPOTIFY_TOKEN_URL = "https://accounts.spotify.com/api/token";
 const SPOTIFY_NOW_PLAYING_URL = "https://api.spotify.com/v1/me/player/currently-playing";
 const SPOTIFY_RECENTLY_PLAYED_URL = "https://api.spotify.com/v1/me/player/recently-played";
 
+/**
+ * All Spotify credentials are read from server-side env vars only.
+ * Never prefix these with VITE_ — Vite inlines VITE_* vars into the
+ * public client bundle, which would leak the secrets to every visitor.
+ */
 async function getAccessToken(): Promise<string | null> {
-  const refresh_token = import.meta.env.VITE_SPOTIFY_REFRESH_TOKEN;
-  const client_id = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
-  const client_secret = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET;
+  const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN;
+  const client_id = process.env.SPOTIFY_CLIENT_ID;
+  const client_secret = process.env.SPOTIFY_CLIENT_SECRET;
 
   if (!refresh_token || !client_id || !client_secret) {
     return null;
   }
 
-  const basic = btoa(`${client_id}:${client_secret}`);
+  const basic = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
 
   try {
     const response = await fetch(SPOTIFY_TOKEN_URL, {
@@ -55,42 +62,46 @@ async function getAccessToken(): Promise<string | null> {
   }
 }
 
-export async function getCurrentlyPlaying(): Promise<SpotifyNowPlayingData | null> {
-  try {
-    const access_token = await getAccessToken();
-    if (!access_token) return null;
+export const getCurrentlyPlaying = createServerFn({ method: "GET" }).handler(
+  async (): Promise<SpotifyNowPlayingData | null> => {
+    try {
+      const access_token = await getAccessToken();
+      if (!access_token) return null;
 
-    const response = await fetch(SPOTIFY_NOW_PLAYING_URL, {
-      headers: { Authorization: `Bearer ${access_token}` },
-    });
+      const response = await fetch(SPOTIFY_NOW_PLAYING_URL, {
+        headers: { Authorization: `Bearer ${access_token}` },
+      });
 
-    if (response.status === 204) {
-      return { is_playing: false, item: null, progress_ms: 0, currently_playing_type: "track" };
+      if (response.status === 204) {
+        return { is_playing: false, item: null, progress_ms: 0, currently_playing_type: "track" };
+      }
+
+      if (!response.ok) return null;
+      return await response.json();
+    } catch {
+      return null;
     }
+  },
+);
 
-    if (!response.ok) return null;
-    return await response.json();
-  } catch {
-    return null;
-  }
-}
+export const getRecentlyPlayed = createServerFn({ method: "GET" }).handler(
+  async (): Promise<SpotifyTrack | null> => {
+    try {
+      const access_token = await getAccessToken();
+      if (!access_token) return null;
 
-export async function getRecentlyPlayed(): Promise<SpotifyTrack | null> {
-  try {
-    const access_token = await getAccessToken();
-    if (!access_token) return null;
+      const response = await fetch(`${SPOTIFY_RECENTLY_PLAYED_URL}?limit=1`, {
+        headers: { Authorization: `Bearer ${access_token}` },
+      });
 
-    const response = await fetch(`${SPOTIFY_RECENTLY_PLAYED_URL}?limit=1`, {
-      headers: { Authorization: `Bearer ${access_token}` },
-    });
-
-    if (!response.ok) return null;
-    const data = await response.json();
-    return data.items?.[0]?.track || null;
-  } catch {
-    return null;
-  }
-}
+      if (!response.ok) return null;
+      const data = await response.json();
+      return data.items?.[0]?.track || null;
+    } catch {
+      return null;
+    }
+  },
+);
 
 export function formatTime(ms: number): string {
   const minutes = Math.floor(ms / 60000);

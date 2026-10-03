@@ -248,12 +248,14 @@ Create a `.env` file in your project root:
 
 ```env
 VITE_SITE_URL=https://your-domain.com
-VITE_SPOTIFY_CLIENT_ID=your_client_id
-VITE_SPOTIFY_CLIENT_SECRET=your_client_secret
-VITE_SPOTIFY_REFRESH_TOKEN=your_refresh_token
+SPOTIFY_CLIENT_ID=your_client_id
+SPOTIFY_CLIENT_SECRET=your_client_secret
+SPOTIFY_REFRESH_TOKEN=your_refresh_token
 ```
 
 `VITE_SITE_URL` is used for OG meta tags and should be your production domain. The Spotify widget will automatically show your currently playing track, or your last played track if nothing is playing.
+
+> **Security note:** Spotify credentials are read from `process.env` inside a server function, so they never reach the browser. Do **not** prefix them with `VITE_` — Vite inlines `VITE_*` variables into the public client bundle, which would expose them to every visitor. Set these same variables in your hosting provider's dashboard when deploying.
 
 ## Demo Mode
 

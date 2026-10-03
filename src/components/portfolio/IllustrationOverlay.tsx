@@ -210,9 +210,9 @@ export default function IllustrationOverlay() {
                     <p>3. Get refresh token via OAuth authorization flow</p>
                     <p>4. Create <code className="px-1.5 py-0.5 rounded bg-black/20 text-xs">.env</code> with:</p>
                     <div className="mt-2 p-2 rounded-lg bg-black/20 font-mono text-xs space-y-1">
-                      <p>VITE_SPOTIFY_CLIENT_ID=...</p>
-                      <p>VITE_SPOTIFY_CLIENT_SECRET=...</p>
-                      <p>VITE_SPOTIFY_REFRESH_TOKEN=...</p>
+                      <p>SPOTIFY_CLIENT_ID=...</p>
+                      <p>SPOTIFY_CLIENT_SECRET=...</p>
+                      <p>SPOTIFY_REFRESH_TOKEN=...</p>
                     </div>
                     <p className="mt-2">See README for detailed OAuth token guide.</p>
                   </div>
